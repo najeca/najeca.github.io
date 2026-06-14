@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Dark Theme (default) */
+  --color-background: #111010;
+  --color-card: #1c1b1b;
+  --color-border: #2a2929;
+  --color-text-primary: #f1f0f0;
+  --color-text-secondary: #9ca3af;
+  --color-accent: #34d399; /* emerald-400 */
+
+  /* Grid overlay */
+  --grid-color: rgba(255, 255, 255, 0.035);
+}
+
+[data-theme="light"] {
+  --color-background: #fafaf9;
+  --color-card: #f0efee;
+  --color-border: #e2e0de;
+  --color-text-primary: #1c1b1b;
+  --color-text-secondary: #6b7280;
+  --color-accent: #059669; /* emerald-600 — deeper for light bg */
+
+  --grid-color: rgba(0, 0, 0, 0.04);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+  background-image: linear-gradient(var(--grid-color) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
